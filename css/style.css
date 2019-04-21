@@ -1,0 +1,621 @@
+/* 
+==================================
+بسم الله الرحمن الرحيم 
+==================================
+*/
+/*
+==================================
+    public style
+==================================
+*/
+* , *:after , *:befor{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    height: 2900px
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+/*
+=================================
+          Navbar
+=================================
+*/
+.navbar{
+    
+ /* padding: 20px 0 ; */
+    overflow: hidden;
+    position: relative;
+    
+}
+.navbar .logo{
+    width: 50%;
+    float: left;
+    display: block;
+
+}
+.navbar .logo .logo-text{ 
+    font-size: 30px;
+    font-weight: bold;
+  
+}
+.navbar input ,.navbar label{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.navbar input{
+    display: none;
+    
+} 
+.navbar label{
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 20px;
+    background: url(../images/Navbar/open.png) no-repeat ;
+    background-size: cover;
+    cursor: pointer;
+}    
+.navbar input:checked ~ .links .ul-list{
+    display: block;
+}     
+.navbar input:checked ~ label{
+    background: url(../images/Navbar/close.png) no-repeat;
+    background-size: cover;
+
+}      
+  
+.navbar .links{
+    width: 50%;
+    float: left;
+    
+}
+.navbar .links .ul-list{
+    padding: 0;
+    list-style: none;
+}
+.navbar .links .ul-list .list-item{
+    display: inline-block;
+    text-transform: capitalize;
+}
+.navbar .links .ul-list .list-item a{
+    display: block;  /* عشان اقدر اتحكم فيه */
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+    
+}
+.navbar .links .ul-list .list-item a:hover{
+ background-color: #222;
+    color: #fff;
+}
+
+/* ======================
+     media for navbar
+   ===================== */
+
+@media (min-width:992px){
+.navbar label{
+    display: none;
+} 
+}
+
+@media (max-width:991px){
+.navbar{
+    width: 100%;
+}
+.navbar .logo{
+    width: 100%;
+    float: none;
+}
+.navbar .links{
+    width: 100%;
+    float: none;
+        
+}
+.navbar .links .ul-list{
+   display: none;
+}
+    
+.navbar .links .ul-list .list-item{
+    width: 100%;
+    display: inline-block;
+}    
+
+.navbar .links .ul-list .list-item a{
+    width: 100%;
+    float: none;
+    text-align: center;
+   
+}
+}
+    
+/*=================================
+         Home 
+  =================================*/
+.home{
+    height: 500px;
+    text-align: center;
+    background-image: url(../images/Home/home-bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    position: relative;
+}
+.home .home-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+.home .home-info .home-heading2{
+    color: #5D5C5D;
+    font-size: 26px;
+    font-weight: bold;
+}
+.home .home-info .home-heading4{
+    color: #FF5D20;
+    font-size: 20px;
+}
+.home .home-info .home-para{
+    color: darkgray;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.home .home-info .home-para span{
+    color: black;
+}
+.home .home-info .home-btn{
+    width: 150px;
+    padding: 12px;
+    background-color:#FF5D20 ;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.home .home-info .home-btn:hover{
+    background-color: #fff ;
+    color: #FF5D20;
+    cursor: pointer;
+}
+
+@media (max-width:991px){
+.home .home-info .home-heading2{
+    font-size: 25px;
+    color: antiquewhite;
+}
+.home .home-info .home-heading4{
+    font-size: 20px;
+}
+.home .home-info .home-para{
+    font-size: 15px;
+}
+    
+}
+
+/*=================================
+               Work 
+  =================================*/
+
+.work{
+    height: auto;
+    overflow: hidden;
+}
+.work h2{
+    font-size: 29px;
+}
+.work h2 span{
+    font-weight: normal;
+}
+.work .part{
+    width: 30%;
+    float: left;
+    height: auto;
+    text-align: center;
+    padding:60px 0;
+    border: 1px solid #888;
+    box-sizing: border-box;
+    margin-left: 5%;
+}
+.work .frist{
+    margin-left: 0;
+}
+.work .part .icon{
+    color: #888;
+    margin-bottom: 50px;
+}
+.work .part h3{
+    font-size: 20px;
+    color: #FF5D20;
+}
+.work .part hr{
+    width: 60%;
+    margin: auto;
+}
+.work .part p{
+    padding: 15px;
+    color: gray
+}
+
+
+/*=====================================
+  الطريقه الاولي :اني اخلي الميديا الكبيره فوق وال الصغيره تحت عشان امنع overlay
+  =================================*/
+
+@media (max-width:991px){
+    .work .part .last{
+        width: 47%;
+        margin-left: 0;
+    }
+}
+@media (max-width:575px){
+    .work .part {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/*=================================
+               Portfolio 
+  =================================*/
+.portfolio{
+    background-color:#F8F8F8 ;
+    padding-top: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.portfolio .portfolio-list{
+    list-style: none;
+    margin: 30px 0 ;
+    
+}
+.portfolio .portfolio-list .portfolio-item{
+    display: inline;
+    margin: 15px;
+    font-weight: bold;
+    color: #888
+    
+}
+.portfolio .portfolio-list .all{
+    background-color:#FF5D20;
+    padding: 10px;
+    color: aliceblue;
+    border: 0;
+}
+
+
+.images div{
+    width: 25%;
+    float: left;
+    position: relative;
+    
+}
+.images div img{
+    width: 100%;
+}
+.images div .over{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,93,32,.3);
+    color: aliceblue;
+    margin: 0;
+    opacity: 0;
+}
+.images div .over span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+.images div:hover .over{
+    opacity: 1;
+}
+
+
+/* ===================================
+الطريقه التانيه : استخدمت الصغير الاول ف بالتالي هحدد للكبير min و max عشان امنع overlay
+====================================*/
+@media(max-width:575px){
+    .portfolio .portfolio-list{
+        padding: 0;
+    }
+    .portfolio .portfolio-list .portfolio-item{
+       display: block; 
+       margin: 20px 0;    
+    }
+    .images div{
+    width: 100%;
+    float: none;
+    margin: 1px 0;
+    }
+    
+}
+@media (min-width:575px) and (max-width:770px){
+    .images div{
+    width: 49.5%;
+    float: left;
+    margin: 1px 1px;
+    }
+}
+
+
+/* ===================================
+           Profile-Skills
+====================================*/
+
+.profile-skills{
+   padding: 50px 0; 
+    overflow: hidden;
+}
+.profile-skills .profile , .profile-skills .skills{
+    width: 50%;
+    float: left;
+}
+
+.profile-skills .profile h2 , .profile-skills .skills h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+.profile-skills .profile h2 span , .profile-skills .skills h2 span {
+        font-size: 35px;
+        font-weight: normal;
+ }
+
+.profile-skills .profile .profile-list{
+    list-style: none;
+    padding: 0;
+}
+.profile-skills .profile .profile-list .profile-item{
+    margin-bottom: 10px;
+}
+.profile-skills .profile .profile-list .profile-item span{
+    font-weight: bold;
+    font-size: 20;
+    color: #888;
+    display: inline-block;
+    width: 100px;
+} 
+
+/* ./profile */ 
+
+.profile-skills .skills p{
+    font-size: 15px;
+    color: #888;
+}
+.profile-skills .skills .bar{
+    height:50px;
+    width: 100%;
+    overflow: hidden; /* to clear float */
+}
+.profile-skills .skills .bar .name{
+    float: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.profile-skills .skills .bar .percent{
+    float: right;
+    padding-right: 8%;
+}
+.profile-skills .skills .bar .outside{
+    height: 3px;
+    background-color:lightblue;
+    clear: both;
+    margin-bottom: 10px;
+}
+.profile-skills .skills .bar .outside .inside1{
+    display: block;
+    height: 3px;
+    background-color:brown;
+    width: 100%;
+}
+.profile-skills .skills .bar .outside .inside2{
+    display: block;
+    height: 3px;
+    background-color:brown;
+    width: 70%;
+}
+.profile-skills .skills .bar .outside .inside3{
+    display: block;
+    height: 3px;
+    background-color:brown;
+    width: 65%;
+}
+
+
+@media (max-width:770px){
+    .profile-skills .profile , .profile-skills .skills{
+        width: 100%;
+    }
+}
+
+/*==========================================
+                 creative
+==========================================*/
+.creative{
+    height: auto;
+    background-image: url(../images/creative/about-bg.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.creative .director{
+    width: 50%;
+    float: right;
+}
+.creative .director h2{font-weight: bold;}
+.creative .director h2 span{
+    color: #888;
+}
+.creative .director h3{
+    font-size: 25px;
+    color: #FF5D20;
+}
+.creative .director h3 span{
+    font-size: 25px;
+    color:darkorange;
+}
+.creative .director p{
+    font-size: 15px;
+    font-weight: bold;
+    color: #888;
+    line-height: 1.3;
+}
+
+@media (max-width:770px){
+    .creative .director{
+        width: 100%;
+        float: none;
+        margin: 25px 0;
+    }     
+}
+/*==========================================
+                 creative
+==========================================*/
+.social{
+    height: auto;
+    overflow: hidden;
+}
+.social .social-fb , .social .social-tw ,.social .social-pin{
+    width: 33.33%;
+    float: left;
+    padding: 50px 0;
+    text-align: center;
+}
+.social .social-fb i, .social .social-tw i,.social .social-pin i{ 
+     
+}
+.social .social-fb {
+    background-color: #3B5998;
+    color: aliceblue;
+    cursor:pointer;
+    
+}
+.social .social-tw {
+    background-color: #498CBF;
+    color: aliceblue;
+    cursor:pointer;
+}
+.social .social-pin {
+    background-color: #CC2127;
+    color: aliceblue;
+    cursor:pointer;
+}
+
+@media (max-width:770px){
+.social .social-fb , .social .social-tw ,.social .social-pin{
+    width: 100%;    
+    }
+}
+
+
+/*==========================================
+            form
+==========================================*/
+.drop{
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+}
+.drop .drop-h2{
+    font-size: 35px;
+    font-weight: bold;
+}
+.drop input::placeholder {
+    color: darkgray;
+}
+.drop  input{
+    margin-bottom: 10px;
+    width: 62%;
+    padding: 7px;
+    text-transform: capitalize;
+}
+.drop  .input1{
+    width: 30%;
+    display: inline;
+}
+.drop textarea{
+    width: 63%;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.drop button {
+    padding: 10px;
+    width: 170px;
+    background-color: #fff;
+    color: #888;
+    border: 1px solid;
+}
+
+
+@media (max-width:770px){
+    .drop input{
+     width:100% ;
+}
+    .drop .input1{
+     width:100% ;
+}
+    .drop textarea{
+    width: 100%;
+    margin-bottom: 15px;
+}
+    
+}
+
+
+/*==========================================
+            fooooooooter
+==========================================*/
+
+.footer{
+    padding: 15px 0;
+    text-align: center;
+    color: #888;
+}
+
+
+
+/*++++++++++++++++++++++++++++++++++++++
+                    والحمدلله
+****************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
